@@ -1,25 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import { Element, scroller } from "react-scroll";
-import BackgroundImg from "../../assests/pictures/img1.jpg";
+import BackgroundVideo from "../../assests/video/Home.mp4";
 import {DownArrow} from "../../components/downAroow";
 import {Navbar} from "../../components/navbar";
 
 const TopContainer = styled.div`
     width: 100%;
-    height:100vh;
+    height:105vh;
     padding: 0;
-    background-image:url(${BackgroundImg});
+    auto-play: autoplay;
+    loop: loop;
+    background-video:url(${BackgroundVideo});
     position: relative;
     `;
 
 const BackgroundFilter = styled.div`
     width: 100%;
     height: 100%;
-    background-color: rgba(56, 56, 56, 0.80);
+    background-color: rgba(56, 56, 56, 0.3);
     display:flex;
     flex-direction:column;
     align-items: center;
+`;
+
+const BackVideo = styled.video`
+    width: 100%;
+    height:100%;
+    padding: 0;
+    auto-play: autoplay;
+    background-image:url(${BackgroundVideo});
+    loop: loop;
 `;
 
 const MotivationalText = styled.h1`
@@ -41,19 +52,20 @@ const DownArrowContainer = styled.div`
 export function TopSection(props) {
 
     const  scrollTonextSection = () => {
-        scroller.scrollTo("servicesSection", { smoth: true, duration: 1500})
+        scroller.scrollTo("ServicesSection", { smoth: true, duration: 1500})
     }
 
 
     return (
         <Element name="topSection">
         <TopContainer>
-        <BackgroundFilter>
             <Navbar />
+            <video width='1381px' height='780px' autoplay='autoplay' muted loop>
+                <source src={BackgroundVideo} type="video/webm"/>
+            </video>
             <DownArrowContainer onClick={scrollTonextSection()}>
                 <DownArrow />
             </DownArrowContainer>
-        </BackgroundFilter>
     </TopContainer>
         </Element>
     );

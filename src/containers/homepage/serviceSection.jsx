@@ -5,10 +5,10 @@ import {SectionTitle} from "../../components/sectionTitle";
 import { Marginer } from "../../components/marginer";
 import {OurService} from "../../components/ourService";
 
-import ServiceImg from "../../assests/pictures/img3.jpg"
+import ServiceImg from "../../assests/pictures/img4.png"
 const ServicesContainer = styled(Element)`
     width: 100%;
-    min-height: 600px;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,10 +19,11 @@ const ServicesContainer = styled(Element)`
 export function SeviceSection(prop) {
     return (
     <ServicesContainer name="serviceSection">
+        <Marginer direction="vertical" margin="9em" />
         <SectionTitle>The Future of Next Gen Programming</SectionTitle>
         <Marginer direction="vertical" margin="3em" />
         <OurService description="FutureGenLabs is a prestige company with years of experience and collaboration.
-         “You need technology working for you not against you”,
+         “You need technology working for you not against you”,</p>
          FuturGenLabs always lean towards the latest technologies to offer the best solutions.
         Think ahead and start working to make your idea a reality."
         imgUrl={ServiceImg}

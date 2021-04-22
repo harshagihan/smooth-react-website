@@ -56,9 +56,10 @@ const StyledDotGroup = styled(DotGroup)`
 export function TecSection(props) {
     return(
         <ReviewsContainer>
-            <SectionTitle>We have the technologies you need.
+            <SectionTitle><p>We have the technologies you need.</p>
                 We can help you succeed.</SectionTitle>
-            <SectionTitle2>The best way to get maximum quality and performance of our application is to use the latest technologies which gives our consumers user friendly,
+            <SectionTitle2><p>The best way to get maximum quality and performance of our application is to use the latest</p>
+                technologies which gives our consumers user friendly,
                 cutting edge experience with less latency and more productivity</SectionTitle2>
             <Marginer direction="vertical" margin="3em" />
             <StyledCarouselProvider

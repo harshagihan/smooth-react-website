@@ -8,7 +8,7 @@ const tecContainer = styled.div`
     height: 450px;
     background-color: #fff;
     box-shadow: 0px 0px 7px rgba(17, 17, 17, 0.2);
-    border-radius: 3px;
+    border-radius: 15px;
     margin:5px 2em;
     position: relative;
 `;
@@ -25,7 +25,7 @@ const ReviewText = styled.p`
 const TecImg = styled.img`
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-right: 20px;
   margin-left: 20px;
 `;
@@ -38,7 +38,7 @@ export function ReviewTec(props) {
     return (
         <tecContainer>
 
-            <Marginer direction="vertical" margin="6em" />
+            <Marginer direction="vertical" margin="5em" />
                 <TecImg src={tecImgUrl} />
         </tecContainer>
     );
